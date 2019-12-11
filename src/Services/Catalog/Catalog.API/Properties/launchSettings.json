@@ -13,11 +13,11 @@
       "launchBrowser": true,
       "launchUrl": "/swagger",
       "environmentVariables": {
-        "ConnectionString": "server=localhost,5433;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
+        "ConnectionString": "Server=FILIPOVIC07\\TEACHING;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;;Integrated Security=false;User id=rs2User;Password=rs2123$;",
         "ASPNETCORE_ENVIRONMENT": "Development",
         "EventBusConnection": "localhost",
         "Serilog:SeqServerUrl": "http://locahost:5340",
-        "Serilog:LogstashgUrl":"http://locahost:8080",
+        "Serilog:LogstashgUrl": "http://locahost:8080"
       }
     },
     "Microsoft.eShopOnContainers.Services.Catalog.API": {
