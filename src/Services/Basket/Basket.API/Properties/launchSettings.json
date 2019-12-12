@@ -10,6 +10,8 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
+      "ConnectionString": "Server=FILIPOVIC07\\TEACHING;Initial Catalog=Microsoft.eShopOnContainers.Services.BasketDb;;Integrated Security=false;User id=rs2User;Password=rs2123$;",
+      "EventBusConnection": "localhost",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {

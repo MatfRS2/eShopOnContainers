@@ -130,7 +130,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API
                 });
             }
 
-            RegisterEventBus(services);
+             RegisterEventBus(services);
 
             services.AddSwaggerGen(options =>
             {
@@ -301,7 +301,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API
                     {
                         retryCount = int.Parse(Configuration["EventBusRetryCount"]);
                     }
-
                     return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, iLifetimeScope, eventBusSubcriptionsManager, subscriptionClientName, retryCount);
                 });
             }
