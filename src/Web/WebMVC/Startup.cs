@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Logging;
 using Polly;
 using Polly.Extensions.Http;
 using StackExchange.Redis;
@@ -40,6 +41,8 @@ namespace Microsoft.eShopOnContainers.WebMVC
         // This method gets called by the runtime. Use this method to add services to the IoC container.
         public void ConfigureServices(IServiceCollection services)
         {
+            IdentityModelEventSource.ShowPII = true; 
+
             services.AddAppInsight(Configuration)
                     .AddHealthChecks(Configuration)
                     .AddCustomMvc(Configuration)

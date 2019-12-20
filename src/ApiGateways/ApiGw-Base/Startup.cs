@@ -9,6 +9,7 @@ using Ocelot.Middleware;
 using System;
 using HealthChecks.UI.Client;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.IdentityModel.Logging;
 
 namespace OcelotApiGw
 {
@@ -25,6 +26,8 @@ namespace OcelotApiGw
         {
             var identityUrl = _cfg.GetValue<string>("IdentityUrl");
             var authenticationProviderKey = "IdentityApiKey";
+
+            IdentityModelEventSource.ShowPII = true;
 
             services.AddHealthChecks()
                 .AddCheck("self", () => HealthCheckResult.Healthy())

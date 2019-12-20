@@ -7,9 +7,10 @@ services:
 
   sql.data:
     image: microsoft/mssql-server-linux:2017-latest
-    build:
-      context: .
-      dockerfile: mssql-server/Dockerfile    
+    environment:
+      SA_PASSWORD: "Pass@word"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID:   "Developer"
 
   nosql.data:
     image: mongo
