@@ -11,7 +11,7 @@ services:
     environment:
       - ACCEPT_EULA=Y
     ports:
-      - "5340:80"
+      - "5342:80"
 
   sql.data:
     environment:
