@@ -59,7 +59,8 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Domain.SeedWork
             return matchingItem;
         }
 
-        private static T Parse<T, K>(K value, string description, Func<T, bool> predicate) where T : Enumeration
+        private static T Parse<T, K>(K value, string description, 
+            Func<T, bool> predicate) where T : Enumeration
         {
             var matchingItem = GetAll<T>().FirstOrDefault(predicate);
 
